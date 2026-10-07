@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 히트맵 번짐 -->
+    <path android:fillColor="#33F4C430"
+        android:pathData="M54,30a24,24 0,1 0,0.01 0z" />
+    <path android:fillColor="#66F07A2A"
+        android:pathData="M54,38a16,16 0,1 0,0.01 0z" />
+    <!-- 위치 핀 -->
+    <group android:translateX="33" android:translateY="27" android:scaleX="1.75" android:scaleY="1.75">
+        <path android:fillColor="#FFFFFF"
+            android:pathData="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5s1.12,-2.5 2.5,-2.5 2.5,1.12 2.5,2.5 -1.12,2.5 -2.5,2.5z" />
+    </group>
+</vector>

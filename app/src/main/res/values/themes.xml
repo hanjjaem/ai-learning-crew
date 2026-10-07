@@ -1,10 +1,7 @@
 <resources>
-    <style name="Theme.PhotoHeatmap" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="android:fontFamily">sans</item>
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">#0B1020</item>
-        <item name="android:navigationBarColor">#0B1020</item>
-        <item name="colorAccent">#7CB8FF</item>
-        <item name="colorPrimary">#7CB8FF</item>
+    <style name="Theme.PhotoHeatmap" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#0D6E53</item>
+        <item name="colorAccent">#0D6E53</item>
+        <item name="android:windowBackground">#EEF1EE</item>
     </style>
 </resources>

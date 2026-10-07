@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-debug-apk:
@@ -49,3 +49,16 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
+
+      - name: Publish APK to the "latest-apk" release (direct phone download link)
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk PhotoHeatmap.apk
+          gh release delete latest-apk --yes --cleanup-tag || true
+          gh release create latest-apk PhotoHeatmap.apk \
+            --target "${{ github.sha }}" \
+            --title "사진 위치 히트맵 (최신 빌드)" \
+            --notes "휴대폰에서 PhotoHeatmap.apk를 눌러 받으면 됩니다. 커밋: ${{ github.sha }}" \
+            --latest
